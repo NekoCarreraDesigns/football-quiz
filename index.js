@@ -49,8 +49,8 @@ var options = ["a", "b", "c", "d"];
 function startQuiz() {
   init();
   console.log("start button clicked");
-  quizStartEl.classList.add("hidden");
-  quizQuestionsEl.classList.remove("hidden");
+  quizStartEl.classList.add("d-none");
+  quizQuestionsEl.classList.remove("d-none");
   displayQuestions();
   startTimer();
 }
@@ -61,8 +61,8 @@ function init() {
   score = 0;
   finalScore = 0;
   penaltyCount = 0;
-  quizStartEl.classList.remove("hidden");
-  quizQuestionsEl.classList.add("hidden");
+  quizStartEl.classList.remove("d-none");
+  quizQuestionsEl.classList.add("d-none");
 }
 // function for starting the countdown timer
 function startTimer() {

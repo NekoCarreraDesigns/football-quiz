@@ -2,83 +2,108 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Football Quiz</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Code Quiz</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link href="/styles.css" rel="stylesheet" />
   </head>
-  <body class="questions">
+
+  <body>
+    <!----------------------------------NAVBAR WITH HIGHSCORES LINK AND TIMER-------------------------------->
     <nav class="navbar">
       <form action="highscores.html">
-        <button class="view-champs" id="highscores-link">
-          View Superbowl Champs
+        <button class="text-light mb-0 btn" id="highscores-link">
+          View Highscores
         </button>
       </form>
-      <span class="timer" id="timer">
+      <span class="text-light navbar-text" id="timer">
         Time: <span id="countdown">75</span>
       </span>
     </nav>
-    <div class="intro">
-      <h1>Fantastic Football Quiz</h1>
-    </div>
-    <div class="intro">
-        <div>
-          <p id="intro">
-            You're obviously a football fan, how well do you know the game? Do you have what it takes to lift the Lombardi trophy
-          </p>
+
+    <!----------------------------------WELCOME, INSTRUCTIONS, AND START QUIZ-------------------------------->
+    <div
+      class="container p-4 mt-5 mx-auto"
+      id="start-quiz"
+      style="max-width: 700px"
+    >
+      <div class="row">
+        <div class="col text-center">
+          <h1 id="greeting">Fantatstic Football Quiz</h1>
         </div>
       </div>
-    <div class="start">
-        <div>
-          <button type="button" class="start-button" id="start-button">
+
+      <div class="row">
+        <div class="col text-center">
+          <p id="intro">How well do you know your football!</p>
+        </div>
+      </div>
+      <div class="row m-2">
+        <div class="col text-center">
+          <button type="button" class="btn-lg btn-dark" id="start-button">
             Start
           </button>
         </div>
       </div>
     </div>
-    <div class="question-container" id="quiz-questions">
-        <div>
-          <div>
-            <h1 class="questions-text" id="question-text"></h1>
-          </div>
-        </div>
-        <div class="answers">
-          <div class="answer-buttons">
-            <button class="answer-button-a" id="a"></button>
-            <button class="answer-button-b" id="b"></button>
-            <button class="answer-button-c" id="c"></button>
-            <button class="answer-button-d" id="d"></button>
-          </div>
-        </div>
-        <div class="feedback">
-          <div>
-            <hr />
-            <span id="feedback-text"></span>
-          </div>
-        </div>
-      </div>
-      <div class="container d-none p-4 mt-5 mx-auto" id="complete">
-        <div class="row">
-          <div class="col text-center">
-            <h1>All Done!</h1>
-            <h2>
-              Your final score is:
-              <span id="final-score"></span>
-            </h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col text-center">
-            <label for="initials">Enter initials:</label>
-            <input type="text" id="initials" />
-            <button class="btn btn-danger" id="submit-score">
-              Submit
-            </button>
-          </div>
+
+    <!----------------------------------QUESTIONS AND CHOICES-------------------------------->
+    <div class="container p-4 mt-5 mx-auto d-none" id="quiz-questions">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="mb-4" id="question-text"></h1>
         </div>
       </div>
 
-    <script src="questions.js"></script>
-    <script src="index.js"></script>
+      <div class="row mt-3 justify-content-center">
+        <div class="col-6 text-center flex-column d-flex">
+          <button class="choice btn btn-dark m-2" id="a"></button>
+          <button class="choice btn btn-dark m-2" id="b"></button>
+          <button class="choice btn btn-dark m-2" id="c"></button>
+          <button class="choice btn btn-dark m-2" id="d"></button>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-6 text-center">
+          <hr />
+          <span id="feedback-text"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-----------------------------FINAL SCORE AND STORE INITIALS IN HIGH SCORES------------------------------>
+    <div class="container d-none p-4 mt-5 mx-auto" id="complete">
+      <div class="row">
+        <div class="col text-center">
+          <h1>All Done!</h1>
+          <h2>
+            Your final score is:
+            <span id="final-score"></span>
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <label for="initials">Enter initials:</label>
+          <input type="text" id="initials" />
+          <button class="btn btn-danger" id="submit-score">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------------------------JAVASCRIPT--------------------------------------------------->
+    <script src="./index.js"></script>
+    <script src="./questions.js"></script>
   </body>
 </html>
