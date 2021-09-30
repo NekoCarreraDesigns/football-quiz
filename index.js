@@ -1,4 +1,13 @@
+// global variables for app
 var timeLeft = 75;
+var score;
+var correct = 6;
+var incorrect = 0;
+var patTry = 1;
+var twoPoint = 2;
+var downs;
+var index;
+
 function timer() {
   timeLeft = timeLeft - 1;
   if (timeLeft < 75) {
