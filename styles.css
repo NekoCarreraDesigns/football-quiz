@@ -21,4 +21,25 @@ body {
 .scores-button {
   border-radius: 10px;
   background-color: gold;
+  padding: 20px;
+}
+
+.intro {
+  color: green;
+  font-size: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.intro-para {
+  color: green;
+  font-size: 40px;
+}
+.start-button {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: green;
+  color: gold;
+}
+.intro-div {
+  display: flex;
+  justify-content: center;
 }

@@ -9,14 +9,23 @@
   </head>
   <body>
     <nav class="quiz-nav" id="navigation">
-      <a href="highscores.html" class="score-link"
-        ><button class="scores-button">View Superbowl Champs</button></a
-      >
+      <a href="highscores.html" class="score-link">
+        <button class="scores-button">View Superbowl Champs</button>
+      </a>
       <span class="countdown-span" id="timer">
         Time: <span class="counter" id="countdown">75</span>
       </span>
     </nav>
-    <div class="picture-div"></div>
+    <div class="intro-div">
+      <div>
+        <h1 class="intro">Fantastic Football Quiz</h1>
+        <p class="intro-para">
+          Do you have what it takes to win the Superbowl!
+        </p>
+        <button class="start-button" id="start">Kickoff</button>
+      </div>
+    </div>
+    <div class="question-container"></div>
     <script src="index.js"></script>
     <script src="questions.js"></script>
   </body>
